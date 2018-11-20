@@ -1,23 +1,7 @@
 class FizzBuzz
 
-  def fizz (num)
-    if num % 3 == 0
-      true
-    else
-      false
-    end
-  end
-
-  def buzz (num)
-    if num % 5 == 0
-      true
-    else
-      false
-    end
-  end
-
-  def fizzBuzz (num)
-    if num % 3 == 0 and num % 5 == 0
+  def divisibleby (num, by)
+    if num % by == 0
       true
     else
       false
@@ -28,15 +12,15 @@ class FizzBuzz
     fbArray = []
     i = startNum
     while i<=endNum
-      if fizzBuzz(i) == true
+      if divisibleby(i, 15) == true
         # print "fizzBuzz "
         fbArray.push("fizzBuzz ")
 
-      elsif buzz(i) == true
+      elsif divisibleby(i, 5) == true
         # print "buzz "
         fbArray.push("buzz ")
 
-      elsif fizz(i) == true
+      elsif divisibleby(i, 3) == true
         # print "fizz "
         fbArray.push("fizz ")
 

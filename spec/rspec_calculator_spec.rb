@@ -7,29 +7,20 @@ describe 'FizzBuzz' do
   end
 
 
-  it "should correctly check if a number is divisible by 3" do
-    expect(@play.fizz(3)).to eq true
-    expect(@play.fizz(2)).to eq false
-    #what if the user puts 0 or a negative number?
-  end
+  it "should correctly check if a number is divisible by 3, 5 and 15" do
+    expect(@play.divisibleby(15, 3)).to eq true
+    expect(@play.divisibleby(22, 5)).to eq false
+    expect(@play.divisibleby(20, 5)).to eq true
+    expect(@play.divisibleby(20, 15)).to eq false
+    expect(@play.divisibleby(30, 15)).to eq true
 
-  it "should correctly check if a number is divisible by 5" do
-    expect(@play.buzz(10)).to eq true
-    expect(@play.buzz(6)).to eq false
-    #what if the user puts 0 or a negative number?
-  end
-
-  it "should correctly check if a number is divisible by 5 AND 3" do
-    expect(@play.fizzBuzz(30)).to eq true
-    expect(@play.fizzBuzz(6)).to eq false
     #what if the user puts 0 or a negative number?
   end
 
   it "should correctly display a list of all numbers in the range provided after applying the fizzBuzz methods" do
     expect(@play.fullFizzBuzz(10,20).length).to eq 11
-    expect(@play.fullFizzBuzz(20,20)[0]).to eq "buzz "
-    expect(@play.fullFizzBuzz(100,120)[2]).to eq "fizz "
-    expect(@play.fullFizzBuzz(0,15)[15]).to eq "fizzBuzz "
+    expect(@play.fullFizzBuzz(25,30)).to eq ["buzz ",26, "fizz ",28,29,"fizzBuzz "]
+
 
     #what if the user puts 0 or a negative number?
   end
