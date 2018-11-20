@@ -17,7 +17,7 @@ describe 'FizzBuzz' do
     #what if the user puts 0 or a negative number?
   end
 
-  it "should correctly display a list of all numbers in the range provided after applying the fizzBuzz methods" do
+  it "should correctly return fizz buzz list according to requirements" do
     expect(@play.fullFizzBuzz(10,20).length).to eq 11
     expect(@play.fullFizzBuzz(25,30)).to eq ["buzz ",26, "fizz ",28,29,"fizzBuzz "]
 
