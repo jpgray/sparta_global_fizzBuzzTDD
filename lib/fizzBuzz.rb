@@ -47,9 +47,6 @@ class FizzBuzz
 
       i += 1
     end
-    print fbArray
+    fbArray
   end
 end
-
-play = FizzBuzz.new
-play.fullFizzBuzz(15,32)
